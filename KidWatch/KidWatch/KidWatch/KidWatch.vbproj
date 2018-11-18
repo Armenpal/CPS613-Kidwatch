@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{666DBFB4-F66A-4B73-8478-8625B638795F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>KidWatch.My.MyApplication</StartupObject>
+    <RootNamespace>KidWatch</RootNamespace>
+    <AssemblyName>KidWatch</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>KidWatch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>KidWatch.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Child.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Child.Designer.vb">
+      <DependentUpon>Child.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ParentUI.Designer.vb">
+      <DependentUpon>ParentUI.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ParentUI.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Child.resx">
+      <DependentUpon>Child.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParentUI.resx">
+      <DependentUpon>ParentUI.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music-2-xxl.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fast-forward-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rewind-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Legend_of_Zelda_A_Link_to_the_Past_Dark_World_Jazz_OC_ReMix.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zelda A Link To The Past Chest Fanfare.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\activity-feed-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\phone_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\IMG_1726.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Brook Eyecatch.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Chopper.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crochet d%27oeil.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\franky.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Luffy.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nami.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Robin.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sanji.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Usopp.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Vivi.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zoro.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sosdan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star-6-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stars.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-6-512-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-6-512-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-6-512-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-6-512-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trifourec bg.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\time-10-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1291876726031.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar-3-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\planner-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\today-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-5-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\birthday-cake-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bus-4-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clenched-fist-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doctor-suitecase-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\soccer-3-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bread-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LisaSimpson.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homerpoint.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marge.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\conference-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BartSimpson13.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lisa_Simpson.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\call-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\no_phone_call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-4-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\picture-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text-justify-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\video-call-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\walkie-talkie-radio-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Goat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\husky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ladybug_large.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message-outline-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\read-message-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning-4-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Blue.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Rabbit.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spam.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow-11-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark-7-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x-mark-4-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\check-mark-7-512-gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-6-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plus-6-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker-512-blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat-512-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shuffle-512-green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cards-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microphone-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\forward-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-4-512-red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mute-2-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\speaker-512-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\broken-link-512.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\microphone-512-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ryan-Reynolds.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\gosling.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hems.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lee.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\failed-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\music.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Music-icon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Qr-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dollar-sign.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
